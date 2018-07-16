@@ -1,30 +1,52 @@
 /*
  * Create a list that holds all of your cards
  */
+let cards = document.getElementsByClassName('card');
+let cardList = [...cards];
+console.log(cardList);
 
+/* 
+* Display the cards on the page after click event
+*/
+let displayCard = function() {
+    this.classList.toggle('open');
+    this.classList.toggle('show');
+    this.classList.toggle('closed');
+}
+
+for (let i = 0; i < cardList.length; i++) {
+    cardList[i].addEventListener('click', displayCard);
+    console.log(this.displayCard);
+}
 
 /*
- * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
-
-// Shuffle function from http://stackoverflow.com/a/2450976
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+let cardDeck = document.querySelector('.deck');
+function initiate() {
+cardsShuffed = shuffle(cardList);
+console.log(cardsShuffed);
+    for (let i = 0; i < cardsShuffed.length; i++) {
+        [].forEach.call(cardsShuffed, function(data) {
+            cardDeck.appendChild(data);
+        });
     }
-
-    return array;
 }
 
+window.onload = initiate();
+
+/*
+* @description: Shuffle function from http: //stackoverflow.com/a/2450976
+* ES6 method applied
+*/
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], [array[i]]];
+    }
+};
 
 /*
  * set up the event listener for a card. If a card is clicked:
