@@ -132,6 +132,22 @@ function compareCards(currentCard, previousCard) {
 }
 
 /*
+ * Rating
+ */
+const starsCounter = document.querySelector('.stars');
+const starImage = `<li><i class="fa fa-star"></i></li>`;
+starsCounter.innerHTML = starImage + starImage + starImage;
+function rating() {
+    if (moves <= 10 ) {
+        starsCounter.innerHTML = starImage + starImage + starImage;
+    } else if (moves <= 15) {
+        starsCounter.innerHTML = starImage + starImage;
+    } else {
+        starsCounter.innerHTML = starImage;
+    }
+}
+
+/*
  * Moves
  */
 const movesCounter = document.querySelector('.moves');
@@ -142,6 +158,9 @@ function addMove() {
     moves++;
     movesCounter.innerHTML = moves;
     console.log('Moves:' + ' ' + moves);
+
+    // Set Rating
+    rating();
 }
 
 /*
