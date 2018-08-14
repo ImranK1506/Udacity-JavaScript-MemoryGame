@@ -37,6 +37,8 @@ for (let i = 0; i < cardList.length; i++) {
     const card = document.createElement('li');
     card.classList.add('card');
 
+// add card content to the list using back tick or template literals
+    card.innerHTML = `<i class='${cardList[i]}'></i>`;
 // append cardList to the parent with the card argument
     deck.appendChild(card);
 
