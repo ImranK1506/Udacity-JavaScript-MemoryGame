@@ -34,6 +34,7 @@ const deck = document.querySelector('.deck');
 
 // Store clicked card in an empty array
 let openedCards = [];
+let matchedCards = [];
 
 // Loop over the cardList
 for (let i = 0; i < cardList.length; i++) {
@@ -62,10 +63,22 @@ for (let i = 0; i < cardList.length; i++) {
                 currentCard.classList.add('match');
                 previousCard.classList.add('match');
 
+                matchedCards.push(currentCard, previousCard);
+                // reset opened cards history
+                openedCards = [];
+
                 console.log('Match');
 
+                // Game end after all cards are matched
+                endGame();
+
             } else {
+                currentCard.classList.remove('open', 'show');
+                openedCards.push(this);
                 console.log('No match');
+
+                // reset opened cards history
+                openedCards = [];
             }
 
         } else {
@@ -74,6 +87,15 @@ for (let i = 0; i < cardList.length; i++) {
             openedCards.push(this);
         }
     })
+}
+
+/*
+ * Game end
+ */
+function endGame() {
+    if (matchedCards.length === cardList.length) {
+        alert('Good Game!');
+    }
 }
 
 
