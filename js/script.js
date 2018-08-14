@@ -181,6 +181,9 @@ restart.addEventListener('click', function() {
     // update moves counter
     moves = 0;
     movesCounter.innerHTML = moves;
+
+    // reset stars to 3 after reset
+    starsCounter.innerHTML = starImage + starImage + starImage;;
 });
 
 /*
