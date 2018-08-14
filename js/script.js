@@ -129,6 +129,22 @@ function compareCards(currentCard, previousCard) {
 }
 
 /*
+ * Reset button
+ */
+const restart = document.querySelector('.restart');
+restart.addEventListener('click', function() {
+    // empty cardList
+    deck.innerHTML = '';
+    console.log('Cards have been reset!' + ' ' + deck.innerHTML);
+
+   // rebuilt cardList array
+    startGame();
+
+    // reset cardList array
+    matchedCards = [];
+});
+
+/*
  * Start game
  */
 startGame();
