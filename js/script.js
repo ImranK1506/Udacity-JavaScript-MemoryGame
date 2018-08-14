@@ -124,8 +124,22 @@ function compareCards(currentCard, previousCard) {
             console.log('No match');
             // reset opened cards history
             openedCards = [];
-        }, 700);
+        }, 500);
     }
+
+    // Add moves after comparison
+    addMove();
+}
+
+/*
+ * Moves
+ */
+const movesCounter = document.querySelector('.moves');
+let moves = 0;
+function addMove() {
+    moves++;
+    movesCounter.innerHTML = moves;
+    console.log('Moves:' + ' ' + moves);
 }
 
 /*
