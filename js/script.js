@@ -73,12 +73,14 @@ for (let i = 0; i < cardList.length; i++) {
                 endGame();
 
             } else {
-                currentCard.classList.remove('open', 'show');
-                openedCards.push(this);
-                console.log('No match');
-
-                // reset opened cards history
-                openedCards = [];
+                // Gives time to see the card even when not a match
+                setTimeout(function() {
+                    currentCard.classList.remove('open', 'show');
+                    previousCard.classList.remove('open', 'show');
+                    console.log('No match');
+                    // reset opened cards history
+                    openedCards = [];
+                }, 700);
             }
 
         } else {
