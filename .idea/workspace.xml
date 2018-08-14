@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8351f055-28cb-48f4-9a91-76466e8fd468" name="Default" comment="Create array of cards and append list blocks to the deck" />
+    <list default="true" id="8351f055-28cb-48f4-9a91-76466e8fd468" name="Default" comment="Create array of cards and append list blocks to the deck">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -36,17 +39,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="119" />
+          <entry key="css" value="122" />
           <entry key="html" value="152" />
-          <entry key="js" value="2813" />
+          <entry key="js" value="3566" />
           <entry key="txt" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="119" />
+          <entry key="CSS" value="122" />
           <entry key="HTML" value="152" />
-          <entry key="JavaScript" value="2813" />
+          <entry key="JavaScript" value="3566" />
           <entry key="PLAIN_TEXT" value="80" />
         </counts>
       </usages-collector>
@@ -81,8 +84,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/script.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="615">
-                  <caret line="41" column="55" lean-forward="true" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+                <state relative-caret-position="608">
+                  <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -93,8 +96,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/app.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="779">
-                  <caret line="106" column="22" lean-forward="true" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+                <state relative-caret-position="377">
+                  <caret line="66" column="15" lean-forward="true" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -131,9 +134,9 @@
         <option value="$PROJECT_DIR$/js/package.json" />
         <option value="$PROJECT_DIR$/js/data.json" />
         <option value="$PROJECT_DIR$/js/data.js" />
-        <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/js/script.js" />
       </list>
     </option>
@@ -238,7 +241,7 @@
       <workItem from="1533735998143" duration="3597000" />
       <workItem from="1534069881228" duration="264000" />
       <workItem from="1534073315790" duration="7769000" />
-      <workItem from="1534162321562" duration="10545000" />
+      <workItem from="1534162321562" duration="13878000" />
     </task>
     <task id="LOCAL-00001" summary="Create array of cards and append list blocks to the deck">
       <created>1534238905432</created>
@@ -251,10 +254,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61532000" />
+    <option name="totallyTimeSpent" value="64865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12111638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -322,15 +326,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="106" column="22" lean-forward="true" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+        <state relative-caret-position="377">
+          <caret line="66" column="15" lean-forward="true" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="55" lean-forward="true" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+        <state relative-caret-position="608">
+          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

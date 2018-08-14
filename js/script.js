@@ -3,22 +3,22 @@
  */
 
 const cardList = [
-     'fa-diamond',
-     'fa-diamond',
-     'fa-paper-plane-o',
-     'fa-paper-plane-o',
-     'fa-anchor',
-     'fa-anchor',
-     'fa-bolt',
-     'fa-bolt',
-     'fa-cube',
-     'fa-cube',
-     'fa-leaf',
-     'fa-leaf',
-     'fa-bicycle',
-     'fa-bicycle',
-     'fa-bomb',
-     'fa-bomb',
+     'fa fa-diamond',
+     'fa fa-diamond',
+     'fa fa-paper-plane-o',
+     'fa fa-paper-plane-o',
+     'fa fa-anchor',
+     'fa fa-anchor',
+     'fa fa-bolt',
+     'fa fa-bolt',
+     'fa fa-cube',
+     'fa fa-cube',
+     'fa fa-leaf',
+     'fa fa-leaf',
+     'fa fa-bicycle',
+     'fa fa-bicycle',
+     'fa fa-bomb',
+     'fa fa-bomb',
 ];
 
 console.dir(cardList);
@@ -32,6 +32,9 @@ console.dir(cardList);
 
 const deck = document.querySelector('.deck');
 
+// Store clicked card in an empty array
+let openedCards = [];
+
 // Loop over the cardList
 for (let i = 0; i < cardList.length; i++) {
     const card = document.createElement('li');
@@ -42,23 +45,52 @@ for (let i = 0; i < cardList.length; i++) {
 // append cardList to the parent with the card argument
     deck.appendChild(card);
 
+// add event listener with click on each card
+    card.addEventListener('click', function() {
+
+        const currentCard = this;
+        const previousCard = openedCards[0];
+        // opened cards
+        if (openedCards.length === 1) {
+            // add open and show class than push cardList to the empty array
+            card.classList.add('open', 'show');
+            openedCards.push(this);
+
+            // compare cards
+            if (currentCard.innerHTML === previousCard.innerHTML) {
+
+                currentCard.classList.add('match');
+                previousCard.classList.add('match');
+
+                console.log('Match');
+
+            } else {
+                console.log('No match');
+            }
+
+        } else {
+        // unopened cards
+            card.classList.add('open', 'show');
+            openedCards.push(this);
+        }
+    })
 }
 
 
 // Shuffle function from http://stackoverflow.com/a/2450976
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-}
+// function shuffle(array) {
+//     var currentIndex = array.length, temporaryValue, randomIndex;
+//
+//     while (currentIndex !== 0) {
+//         randomIndex = Math.floor(Math.random() * currentIndex);
+//         currentIndex -= 1;
+//         temporaryValue = array[currentIndex];
+//         array[currentIndex] = array[randomIndex];
+//         array[randomIndex] = temporaryValue;
+//     }
+//
+//     return array;
+// }
 
 
 /*
