@@ -135,6 +135,8 @@ function compareCards(currentCard, previousCard) {
  * Moves
  */
 const movesCounter = document.querySelector('.moves');
+// dynamic start point
+movesCounter.innerHTML = 0;
 let moves = 0;
 function addMove() {
     moves++;
@@ -156,6 +158,10 @@ restart.addEventListener('click', function() {
 
     // reset cardList array
     matchedCards = [];
+
+    // update moves counter
+    moves = 0;
+    movesCounter.innerHTML = moves;
 });
 
 /*
