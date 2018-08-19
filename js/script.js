@@ -93,7 +93,7 @@ function onClick(card) {
             card.classList.add('open', 'show', 'disable');
             openedCards.push(this);
         }
-    })
+    });
 }
 
 /*
