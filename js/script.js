@@ -190,10 +190,10 @@ restart.addEventListener('click', function() {
 startGame();
 
 /*
- * End game
+ * End game with message
  */
 function endGame() {
     if (matchedCards.length === cardList.length) {
-        alert('Good Game!');
+        alert('Good Game! Your total score:' + ' ' + moves );
     }
 }
