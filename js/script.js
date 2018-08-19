@@ -35,7 +35,8 @@ let openedCards = [];
 let matchedCards = [];
 
 function startGame() {
-    for (let i = 0; i < cardList.length; i++) {
+    const cards = shuffle(cardList);
+    for (let i = 0; i < cards.length; i++) {
         const card = document.createElement('li');
         card.classList.add('card');
 
@@ -50,19 +51,16 @@ function startGame() {
 }
 
 // Shuffle function from http://stackoverflow.com/a/2450976
-// function shuffle(array) {
-//     var currentIndex = array.length, temporaryValue, randomIndex;
-//
-//     while (currentIndex !== 0) {
-//         randomIndex = Math.floor(Math.random() * currentIndex);
-//         currentIndex -= 1;
-//         temporaryValue = array[currentIndex];
-//         array[currentIndex] = array[randomIndex];
-//         array[randomIndex] = temporaryValue;
-//     }
-//
-//     return array;
-// }
+// Using ES6 method
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+
+    return array;
+}
 
 
 /*
@@ -192,7 +190,7 @@ restart.addEventListener('click', function() {
 startGame();
 
 /*
- * Game end
+ * End game
  */
 function endGame() {
     if (matchedCards.length === cardList.length) {
