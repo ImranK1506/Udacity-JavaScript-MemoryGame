@@ -39,7 +39,7 @@
         <counts>
           <entry key="css" value="283" />
           <entry key="html" value="182" />
-          <entry key="js" value="6261" />
+          <entry key="js" value="6273" />
           <entry key="txt" value="80" />
         </counts>
       </usages-collector>
@@ -47,7 +47,7 @@
         <counts>
           <entry key="CSS" value="283" />
           <entry key="HTML" value="196" />
-          <entry key="JavaScript" value="6247" />
+          <entry key="JavaScript" value="6259" />
           <entry key="PLAIN_TEXT" value="80" />
         </counts>
       </usages-collector>
@@ -73,8 +73,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/script.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="723">
-                  <caret line="194" column="20" lean-forward="true" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
+                <state relative-caret-position="798">
+                  <caret line="199" selection-start-line="199" selection-end-line="199" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -231,7 +231,7 @@
       <workItem from="1534069881228" duration="264000" />
       <workItem from="1534073315790" duration="7769000" />
       <workItem from="1534162321562" duration="23613000" />
-      <workItem from="1534517051467" duration="4453000" />
+      <workItem from="1534517051467" duration="4682000" />
     </task>
     <task id="LOCAL-00001" summary="Create array of cards and append list blocks to the deck">
       <created>1534238905432</created>
@@ -244,7 +244,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79053000" />
+    <option name="totallyTimeSpent" value="79282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -316,8 +316,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="194" column="20" lean-forward="true" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
+        <state relative-caret-position="798">
+          <caret line="199" selection-start-line="199" selection-end-line="199" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
