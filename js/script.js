@@ -87,7 +87,6 @@ function onClick(card) {
 
             // compare cards
             compareCards(currentCard, previousCard);
-
         } else {
             // unopened cards
             card.classList.add('open', 'show', 'disable');
