@@ -7,7 +7,6 @@ html {
 *::after {
     box-sizing: inherit;
 }
-
 html,
 body {
     width: 100%;
@@ -106,7 +105,6 @@ h1 {
 }
 
 .score-panel .stars {
-    margin: 0;
     padding: 0;
     display: inline-block;
     margin: 0 5px 0 0;
@@ -124,79 +122,78 @@ h1 {
 
 /* Media queries */
 
-/*
-   ##Device: iPhone X/XS/XS Max/XR
-*/
-@media only screen
-    and (max-device-width : 375px)
-    and (max-device-height : 896px)
-    and (-webkit-device-pixel-ratio : 3) {
-    .score-panel {
-        font-size: 45px;
-        width: 50%;
-    }
-}
+/*!**/
+/*   ##Device: iPhone X/XS/XS Max/XR*/
+/**!*/
+/*@media only screen*/
+/*    and (max-device-width : 375px)*/
+/*    and (max-device-height : 896px)*/
+/*    and (-webkit-device-pixel-ratio : 3) {*/
+/*    .score-panel {*/
+/*        font-size: 45px;*/
+/*        width: 50%;*/
+/*    }*/
+/*}*/
 
-/*
-    ##Device: iPhone 6/7/8
-*/
-@media only screen
-and (max-device-width : 375px)
-and (max-device-height : 667px)
-and (-webkit-device-pixel-ratio : 2) {
-    .score-panel {
-        font-size: 45px;
-        width: 50%;
-    }
-}
+/*!**/
+/*    ##Device: iPhone 6/7/8*/
+/**!*/
+/*@media only screen*/
+/*and (max-device-width : 375px)*/
+/*and (max-device-height : 667px)*/
+/*and (-webkit-device-pixel-ratio : 2) {*/
+/*    .score-panel {*/
+/*        font-size: 45px;*/
+/*        width: 50%;*/
+/*    }*/
+/*}*/
 
-/*
-    ##Device: iPhone 6/7/8 Plus
-*/
-@media only screen
-    and (min-device-width: 414px)
-    and (max-device-height: 736px)
-    and (-webkit-device-pixel-ratio: 3) {
-    .score-panel {
-        font-size: 45px;
-        width: 50%;
-    }
-}
+/*!**/
+/*    ##Device: iPhone 6/7/8 Plus*/
+/**!*/
+/*@media only screen*/
+/*    and (min-device-width: 414px)*/
+/*    and (max-device-height: 736px)*/
+/*    and (-webkit-device-pixel-ratio: 3) {*/
+/*    .score-panel {*/
+/*        font-size: 45px;*/
+/*        width: 50%;*/
+/*    }*/
+/*}*/
 
-/*
-    ##Device: iPhone 5/SE
-*/
-@media only screen
-    and (min-device-width: 320px)
-    and (max-device-height: 568px)
-    and (-webkit-device-pixel-ratio: 2) {
-    .score-panel {
-        font-size: 45px;
-        width: 50%;
-    }
-}
+/*!**/
+/*    ##Device: iPhone 5/SE*/
+/**!*/
+/*@media only screen*/
+/*    and (min-device-width: 320px)*/
+/*    and (max-device-height: 568px)*/
+/*    and (-webkit-device-pixel-ratio: 2) {*/
+/*    .score-panel {*/
+/*        font-size: 45px;*/
+/*        width: 50%;*/
+/*    }*/
+/*}*/
 
-/*
-    ## Device: iPad
-*/
-@media only screen
-    and (min-device-width : 768px)
-    and (max-device-width : 1024px)  {
-    .score-panel {
-        font-size: 45px;
-        width: 50%;
-    }
-}
+/*!**/
+/*    ##Device: iPad*/
+/**!*/
+/*@media only screen*/
+/*    and (min-device-width : 768px)*/
+/*    and (max-device-width : 1024px)  {*/
+/*    .score-panel {*/
+/*        font-size: 45px;*/
+/*        width: 50%;*/
+/*    }*/
+/*}*/
 
-/*
-    ## Device: Pixel 2/ XL
-*/
-@media only screen
-    and (min-device-width: 411px)
-    and (max-device-width: 767px) {
-    .score-panel {
-        font-size: 45px;
-        width: 50%;
-    }
-}
-
+/*!**/
+/*    ##Device: Pixel 2/ XL*/
+/**!*/
+/*@media only screen*/
+/*    and (min-device-width: 411px)*/
+/*    and (max-device-width: 767px) {*/
+/*    .score-panel {*/
+/*        font-size: 45px;*/
+/*        width: 50%;*/
+/*    }*/
+/*}*/

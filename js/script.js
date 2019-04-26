@@ -28,7 +28,7 @@ console.dir(cardList);
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
-const deck = document.querySelector('.deck');
+const allCards = document.querySelector('.deck');
 
 // Store clicked card in an empty array
 let openedCards = [];
@@ -43,10 +43,11 @@ function startGame() {
     // add card content to the list using back tick or template literals
         card.innerHTML = `<i class='${cardList[i]}'></i>`;
     // append cardList to the parent with the card argument
-        deck.appendChild(card);
+        allCards.appendChild(card);
 
     // click event on cards
         onClick(card);
+
     }
 }
 
@@ -84,7 +85,6 @@ function onClick(card) {
             // add open and show class than push cardList to the empty array
             card.classList.add('open', 'show', 'disable');
             openedCards.push(this);
-
             // compare cards
             compareCards(currentCard, previousCard);
         } else {
@@ -120,8 +120,10 @@ function compareCards(currentCard, previousCard) {
             previousCard.classList.remove('open', 'show', 'disable');
             console.log('No match');
             // reset opened cards history
-            openedCards = [];
+            // openedCards = [];
         }, 500);
+       // reset opened cards history
+         openedCards = [];
     }
 
     // Add moves after comparison
@@ -161,13 +163,24 @@ function addMove() {
 }
 
 /*
+ * Timer
+ */
+// const minutes = document.getElementById('minutes');
+// const seconds = document.getElementById('seconds');
+//
+// setInterval(function() {
+//    var minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
+//    var seconds = Math.floor((counter % (1000 * 60)) / 1000);
+// },1000);
+
+/*
  * Reset button
  */
 const restart = document.querySelector('.restart');
 restart.addEventListener('click', function() {
     // empty cardList
-    deck.innerHTML = '';
-    console.log('Cards have been reset!' + ' ' + deck.innerHTML);
+    allCards.innerHTML = '';
+    console.log('Cards have been reset!' + ' ' + allCards.innerHTML);
 
    // rebuilt cardList array
     startGame();
@@ -193,6 +206,6 @@ startGame();
  */
 function endGame() {
     if (matchedCards.length === cardList.length) {
-        alert('Good Game! Your total score:' + ' ' + moves );
+        alert('Good Game! Your total score:' + ' ' + moves);
     }
 }
