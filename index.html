@@ -12,7 +12,7 @@
 
     <div class="container">
         <header>
-            <div class="title"></div>
+            <h2>Memory Game</h2>
         </header>
 
         <section class="score-panel">
@@ -25,15 +25,31 @@
             <span class="hours">00:</span>
         	<span id="minutes">00:</span>
         	<span id="seconds">00</span>
-                |
+
             <div class="restart">
         		<i class="fa fa-repeat"></i>
         	</div>
         </section>
 
-        <ul class="deck">
-            <!-- Inserting dynamic content rendering through an array of cards-->
-        </ul>
+        <div class="deck_container">
+            <ul class="deck">
+                <!-- Inserting dynamic content rendering through an array of cards-->
+            </ul>
+        </div>
+
+        <div class="modal">
+            <div class="modal-content">
+                <h2>Game Over</h2>
+                <a class="cross" href="#">X</a>
+                <div class="result">
+                    <p>Total score
+                        <div class="total-moves">Total moves:</div>
+                        <div class="total-time">Total time:</div>
+                    </p>
+                    <p>Score: <span class="total-stars"></span></p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="js/script.js"></script>
