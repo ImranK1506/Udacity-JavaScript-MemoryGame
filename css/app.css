@@ -139,7 +139,7 @@ h1 {
    ##Device: iPhone X/XS/XS Max/XR
 */
 @media only screen
-and (max-device-width : 375px)
+and (min-device-width : 375px)
 and (max-device-height : 896px)
 and (-webkit-device-pixel-ratio : 3) {
     .deck {
@@ -188,19 +188,10 @@ and (orientation: portrait) {
 and (min-device-width: 414px)
 and (max-device-height: 736px)
 and (-webkit-device-pixel-ratio: 3) {
-    .deck {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-        min-height:0;
-    }
     .deck .card {
         width: 22%;
-        /*height: 95px;*/
+        height: 95px;
         margin: 10px 0;
-    }
-    .deck_container {
-        width: 100%;
     }
 }
 
@@ -235,14 +226,10 @@ and (-webkit-device-pixel-ratio: 3) {
    ##Device: Galaxy S4, S5
 */
 @media screen
-and (device-width: 360px)
-and (device-height: 640px)
+and (min-device-width: 360px)
+and (min-device-height: 640px)
 and (-webkit-device-pixel-ratio: 3)
 and (orientation: portrait) {
-    .score-panel {
-        width: 290px;
-        font-size: 20px;
-    }
     .deck {
         width: 100%;
         height: 100%;
@@ -253,9 +240,6 @@ and (orientation: portrait) {
         width: 22%;
         height: 90px;
         margin: 10px 0;
-    }
-    .deck_container {
-        width: 100%;
     }
 }
 
@@ -277,17 +261,9 @@ and (orientation: portrait) {
 @media only screen
 and (min-device-width: 411px)
 and (max-device-width: 767px) {
-    .deck {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-    }
     .deck .card {
         width: 22%;
-        height: 120px;
+        height: 110px;
         margin: 10px 0;
-    }
-    .deck_container {
-        width: 100%;
     }
 }
