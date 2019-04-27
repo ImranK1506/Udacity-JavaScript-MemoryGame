@@ -20,7 +20,8 @@ const cardList = [
      'fa fa-bomb',
 ];
 
-console.dir(cardList);
+let cards = [...cardList];
+console.dir(cards);
 
 /*
  * Display the cards on the page
@@ -44,10 +45,8 @@ function startGame() {
         card.innerHTML = `<i class='${cardList[i]}'></i>`;
     // append cardList to the parent with the card argument
         allCards.appendChild(card);
-
     // click event on cards
         onClick(card);
-
     }
 }
 
@@ -59,10 +58,8 @@ function shuffle(array) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
-
     return array;
 }
-
 
 /*
  * set up the event listener for a card. If a card is clicked:
@@ -76,6 +73,7 @@ function shuffle(array) {
  */
 function onClick(card) {
     card.addEventListener('click', function() {
+       setTimer();
 
         const currentCard = this;
         const previousCard = openedCards[0];
@@ -101,19 +99,18 @@ function onClick(card) {
 function compareCards(currentCard, previousCard) {
     if (currentCard.innerHTML === previousCard.innerHTML) {
 
-        currentCard.classList.add('match');
-        previousCard.classList.add('match');
+       currentCard.classList.add('match');
+       previousCard.classList.add('match');
+       matchedCards.push(currentCard, previousCard);
+       // reset opened cards history
+       openedCards = [];
 
-        matchedCards.push(currentCard, previousCard);
-        // reset opened cards history
-        openedCards = [];
+       console.log('Match');
 
-        console.log('Match');
+       // Game end after all cards are matched
+       endGame();
 
-        // Game end after all cards are matched
-        endGame();
-
-        } else {
+      } else {
         // Gives time to see the cards even when there is no match
         setTimeout(function() {
             currentCard.classList.remove('open', 'show', 'disable');
@@ -165,13 +162,27 @@ function addMove() {
 /*
  * Timer
  */
+const timer = document.querySelector('.timer');
+let hour = 0, minute = 0, second = 0;
+
 // const minutes = document.getElementById('minutes');
 // const seconds = document.getElementById('seconds');
-//
-// setInterval(function() {
-//    var minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
-//    var seconds = Math.floor((counter % (1000 * 60)) / 1000);
-// },1000);
+// var minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
+// var seconds = Math.floor((counter % (1000 * 60)) / 1000);
+function setTimer() {
+   interval = setInterval(function() {
+      timer.innerHTML = minute + ' min ' + second + ' sec ';
+      second++;
+      if (second === 60) {
+         minute++;
+         second = 0;
+      }
+      if (minute === 60) {
+         hour++;
+         minute = 0
+      }
+   },1000);
+}
 
 /*
  * Reset button
@@ -204,8 +215,20 @@ startGame();
 /*
  * End game with message
  */
+
+let interval;
+// let matchingCards = document.getElementsByClassName('match');
+// Using getElementsByClassName instead of querySelector here (there's only one class to select) because querySelector is non-live, i.e., it doesn't reflect DOM manipulation. When the user wins the game, a class ("show") is added to the element with class modal, which is set to visible in CSS, so getElementsByClassName is needed (otherwise the modal remains hidden when the game has been won)
+let modal = document.getElementsByClassName('modal')[0];
 function endGame() {
     if (matchedCards.length === cardList.length) {
-        alert('Good Game! Your total score:' + ' ' + moves);
+       clearInterval(interval);
+
+       modal.classList.add('show');
+       let starRating = document.querySelector('.stars').innerHTML;
+
+       document.getElementsByClassName('total-moves')[0].innerHTML = moves;
+       document.getElementsByClassName('total-stars')[0].innerHTML = starRating;
+       alert('Good Game! Your total score:' + ' ' + moves);
     }
 }

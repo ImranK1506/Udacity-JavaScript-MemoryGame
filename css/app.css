@@ -98,7 +98,7 @@ h1 {
 
 .score-panel {
     text-align: left;
-    width: 345px;
+    width: 38%;
     /*margin-bottom: 10px;*/
     font-size: 25px;
 }
@@ -156,6 +156,10 @@ and (-webkit-device-pixel-ratio : 3) {
     .deck_container {
         width: 100%;
     }
+    .score-panel {
+        width: 90%;
+        font-size: 22px;
+    }
 }
 
 /*
@@ -179,6 +183,10 @@ and (orientation: portrait) {
     }
     .deck_container {
         width: 100%;
+    }
+    .score-panel {
+        width: 90%;
+        font-size: 22px;
     }
 }
 /*
@@ -241,20 +249,51 @@ and (orientation: portrait) {
         height: 90px;
         margin: 10px 0;
     }
+    .score-panel {
+        width: 90%;
+        font-size: 22px;
+    }
 }
 
-/*!**/
-/*    ##Device: iPad*/
-/**!*/
-/*@media only screen*/
-/*    and (min-device-width : 768px)*/
-/*    and (max-device-width : 1024px)  {*/
-/*    .score-panel {*/
-/*        font-size: 45px;*/
-/*        width: 50%;*/
-/*    }*/
-/*}*/
+/*
+    ##Device: iPad
+*/
+@media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)  {
+        .deck {
+            min-height:0;
+        }
+        .deck .card {
+            width: 22%;
+            height: 90px;
+            margin: 10px 0;
+        }
+        .score-panel {
+            width: 80%;
+            font-size: 23px;
+        }
+}
 
+/*
+    ##Device: iPad Pro
+*/
+@media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1366px) {
+        .deck {
+            min-height: 0;
+        }
+        .deck .card {
+            width: 22%;
+            height: 90px;
+            margin: 10px 0;
+        }
+        .score-panel {
+            width: 50%;
+            font-size: 23px;
+        }
+}
 /*
     ##Device: Pixel 2/ XL
 */
@@ -265,5 +304,9 @@ and (max-device-width: 767px) {
         width: 22%;
         height: 110px;
         margin: 10px 0;
+    }
+    .score-panel {
+        width: 90%;
+        font-size: 22px;
     }
 }
