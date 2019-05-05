@@ -1,7 +1,7 @@
 /*
  * Create a list that holds all of your cards
  */
-const cardList = [
+let cardList = [
      'fa fa-diamond',
      'fa fa-diamond',
      'fa fa-paper-plane-o',
@@ -51,7 +51,6 @@ function startGame() {
 }
 
 // Shuffle function from http://stackoverflow.com/a/2450976
-// Using ES6 method
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -73,18 +72,16 @@ function shuffle(array) {
  */
 function onClick(card) {
     card.addEventListener('click', function() {
-       setTimer();
 
-        const currentCard = this;
-        const previousCard = openedCards[0];
-
+        const firstCard = this;
+        const secondCard = openedCards[0];
         // opened cards
         if (openedCards.length === 1) {
             // add open and show class than push cardList to the empty array
             card.classList.add('open', 'show', 'disable');
             openedCards.push(this);
             // compare cards
-            compareCards(currentCard, previousCard);
+            compareCards(firstCard, secondCard);
         } else {
             // unopened cards
             card.classList.add('open', 'show', 'disable');
@@ -94,14 +91,33 @@ function onClick(card) {
 }
 
 /*
+ * Open cards
+ */
+// function openCard() {
+//    openedCards.push(this);
+//    openedCards.length;
+//    if (openedCards.length === 1 && moves === 0) {
+//       second = 0;
+//       minute = 0;
+//       hour = 0;
+//       startTimer();
+//    }
+// }
+
+// for (let i = 0; i < cards.length; i++) {
+//    cardList = cards[i];
+//    cardList.addEventListener('click', openCard);
+// }
+
+/*
  * Compare cards
  */
-function compareCards(currentCard, previousCard) {
-    if (currentCard.innerHTML === previousCard.innerHTML) {
+function compareCards(firstCard, secondCard) {
+    if (firstCard.innerHTML === secondCard.innerHTML) {
 
-       currentCard.classList.add('match');
-       previousCard.classList.add('match');
-       matchedCards.push(currentCard, previousCard);
+       firstCard.classList.add('match');
+       secondCard.classList.add('match');
+       matchedCards.push(firstCard, secondCard);
        // reset opened cards history
        openedCards = [];
 
@@ -113,8 +129,8 @@ function compareCards(currentCard, previousCard) {
       } else {
         // Gives time to see the cards even when there is no match
         setTimeout(function() {
-            currentCard.classList.remove('open', 'show', 'disable');
-            previousCard.classList.remove('open', 'show', 'disable');
+            firstCard.classList.remove('open', 'show', 'disable');
+            secondCard.classList.remove('open', 'show', 'disable');
             console.log('No match');
             // reset opened cards history
             // openedCards = [];
@@ -163,13 +179,10 @@ function addMove() {
  * Timer
  */
 const timer = document.querySelector('.timer');
-let hour = 0, minute = 0, second = 0;
+let second = 0, minute = 0, hour = 0;
+// let initialClick = false;
 
-// const minutes = document.getElementById('minutes');
-// const seconds = document.getElementById('seconds');
-// var minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
-// var seconds = Math.floor((counter % (1000 * 60)) / 1000);
-function setTimer() {
+function startTimer() {
    interval = setInterval(function() {
       timer.innerHTML = minute + ' min ' + second + ' sec ';
       second++;
@@ -182,6 +195,10 @@ function setTimer() {
          minute = 0
       }
    },1000);
+}
+
+function clearTimer() {
+   clearInterval(second);
 }
 
 /*
@@ -204,7 +221,9 @@ restart.addEventListener('click', function() {
     movesCounter.innerHTML = moves;
 
     // reset stars to 3 after reset
-    starsCounter.innerHTML = starImage + starImage + starImage;;
+    starsCounter.innerHTML = starImage + starImage + starImage;
+
+   clearTimer();
 });
 
 /*
@@ -218,7 +237,6 @@ startGame();
 
 let interval;
 // let matchingCards = document.getElementsByClassName('match');
-// Using getElementsByClassName instead of querySelector here (there's only one class to select) because querySelector is non-live, i.e., it doesn't reflect DOM manipulation. When the user wins the game, a class ("show") is added to the element with class modal, which is set to visible in CSS, so getElementsByClassName is needed (otherwise the modal remains hidden when the game has been won)
 let modal = document.getElementsByClassName('modal')[0];
 function endGame() {
     if (matchedCards.length === cardList.length) {
