@@ -75,11 +75,14 @@ function shuffle(array) {
 function clickCard() {
    deck.addEventListener('click', e => {
       const clickedCard = e.target;
-      if (clickedCard.classList.contains('card')) {
+      if (clickedCard.classList.contains('card') && openedCards.length < 2) {
          // Display the card's symbol
          displayCard(clickedCard);
-         // Add to openCards
-         toOpenCards(clickedCard);
+         // Add to openedCards
+         toOpenedCards(clickedCard);
+         if(openedCards.length === 2) {
+            checkIfMatch(clickedCard);
+         }
       }
    });
 }
@@ -87,25 +90,46 @@ function clickCard() {
 /*
  * Display the card's symbol
  */
-function displayCard(clickedCard) {
-   clickedCard.classList.toggle('open');
-   clickedCard.classList.toggle('show');
-   console.log(clickedCard);
-
+function displayCard(card) {
+   card.classList.toggle('open');
+   card.classList.toggle('show');
+   console.log(card);
 }
 
 /*
- * Add to openCards
+ * Add to openedCards
  */
-function toOpenCards(clickedCard) {
-   openCards.push(clickedCard);
-   console.log(openCards);
+function toOpenedCards(card) {
+   openedCards.push(card);
+   console.log(openedCards);
 }
 
 /*
  * Add the card to a *list* of "open" cards
  */
-let openCards = [];
+let openedCards = [];
+
+/*
+ * Check if cards have a match
+ */
+function checkIfMatch() {
+   // let firstClick = openedCards[0].firstElementChild.className;
+   // let secondClick = openedCards[1].firstElementChild.className;
+
+   if (openedCards[0].firstElementChild.className === openedCards[1].firstElementChild.className) {
+      openedCards[0].classList.toggle('match');
+      openedCards[1].classList.toggle('match');
+      openedCards = [];
+      console.log('Match');
+   } else {
+      setTimeout(() => {
+         displayCard(openedCards[0]);
+         displayCard(openedCards[1]);
+         openedCards = [];
+         console.log('No match');
+      }, 1000);
+   }
+}
 
 /*
  * Start game

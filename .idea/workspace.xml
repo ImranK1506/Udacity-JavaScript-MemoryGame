@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8351f055-28cb-48f4-9a91-76466e8fd468" name="Default" comment="Create array of cards and append list blocks to the deck">
-      <change afterPath="$PROJECT_DIR$/js/script2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script2.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script2.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,11 +18,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.47867298">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="310">
-                  <caret line="66" column="28" lean-forward="true" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+                <state relative-caret-position="1088">
+                  <caret line="68" column="53" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
                 </state>
               </provider>
             </entry>
@@ -48,11 +45,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/script.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-72">
-                  <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
+                <state relative-caret-position="626">
+                  <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -76,8 +73,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/script2.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="641">
-                  <caret line="96" column="2" lean-forward="true" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
+                <state relative-caret-position="498">
+                  <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -100,9 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>match</find>
-      <find>displayCard</find>
-      <find>console</find>
       <find>disab</find>
       <find>cardList</find>
       <find>openedCards</find>
@@ -124,15 +118,21 @@
       <find>allCards</find>
       <find>open</find>
       <find>startGame</find>
-      <find>card</find>
       <find>click</find>
       <find>cardClass</find>
       <find>hasCl</find>
       <find>displaySymbol</find>
       <find>listOfCards</find>
+      <find>openCards</find>
+      <find>&amp;&amp; openedCards.length &lt; 2</find>
+      <find>clickedCard</find>
+      <find>card</find>
     </findStrings>
     <replaceStrings>
       <replace>secondCard</replace>
+      <replace>openedCards</replace>
+      <replace>card</replace>
+      <replace>clickedCard</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -158,16 +158,27 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-43" />
-    <option name="y" value="-1080" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Udacity-JavaScript-MemoryGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Udacity-JavaScript-MemoryGame" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -225,7 +236,8 @@
       <workItem from="1556211031689" duration="836000" />
       <workItem from="1556287862091" duration="27755000" />
       <workItem from="1556811601763" duration="24411000" />
-      <workItem from="1556906456621" duration="4979000" />
+      <workItem from="1556906456621" duration="11203000" />
+      <workItem from="1557157380110" duration="1314000" />
     </task>
     <task id="LOCAL-00001" summary="Create array of cards and append list blocks to the deck">
       <created>1534238905432</created>
@@ -238,10 +250,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153723000" />
+    <option name="totallyTimeSpent" value="161261000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-43" y="-1080" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.13638757" />
@@ -255,7 +267,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.15392354" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.13734291" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32944345" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32944345" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3295053" />
@@ -329,6 +341,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="68" column="53" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2880">
@@ -343,6 +362,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1456">
@@ -350,27 +379,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="66" column="28" lean-forward="true" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/script2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="96" column="2" lean-forward="true" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
+        <state relative-caret-position="498">
+          <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
