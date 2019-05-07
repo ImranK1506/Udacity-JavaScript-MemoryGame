@@ -22,6 +22,7 @@ let cardList = [
 
 let arrayOfCards = [...cardList];
 console.dir(arrayOfCards);
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -29,11 +30,6 @@ console.dir(arrayOfCards);
  *   - add each card's HTML to the page
  */
 const deck = document.querySelector('.deck');
-// const card = document.createElement('li');
-// card.classList.add('card');
-// const card = document.createElement('li');
-// card.classList.add('card');
-// deck.appendChild(card);
 
 function startGame() {
    const shuffleCards = shuffle(arrayOfCards);
@@ -75,16 +71,30 @@ function shuffle(array) {
 function clickCard() {
    deck.addEventListener('click', e => {
       const clickedCard = e.target;
-      if (clickedCard.classList.contains('card') && openedCards.length < 2) {
+      if (clickedCardCondition(clickedCard)) {
          // Display the card's symbol
          displayCard(clickedCard);
          // Add to openedCards
          toOpenedCards(clickedCard);
+         // Shouldn't compare more than two cards
          if(openedCards.length === 2) {
             checkIfMatch(clickedCard);
+            addMoves();
          }
       }
    });
+}
+
+/*
+ * Check card conditions
+ */
+function clickedCardCondition(clickedCard) {
+   return (
+       clickedCard.classList.contains('card') &&
+       !clickedCard.classList.contains('show') &&
+       openedCards.length < 2 &&
+       !openedCards.includes(clickedCard)
+   )
 }
 
 /*
@@ -113,9 +123,6 @@ let openedCards = [];
  * Check if cards have a match
  */
 function checkIfMatch() {
-   // let firstClick = openedCards[0].firstElementChild.className;
-   // let secondClick = openedCards[1].firstElementChild.className;
-
    if (openedCards[0].firstElementChild.className === openedCards[1].firstElementChild.className) {
       openedCards[0].classList.toggle('match');
       openedCards[1].classList.toggle('match');
@@ -129,6 +136,21 @@ function checkIfMatch() {
          console.log('No match');
       }, 1000);
    }
+}
+
+/*
+ * Moves start point
+ */
+let moves = 0;
+
+/*
+ * Increment moves
+ */
+function addMoves() {
+   const movesCounter = document.querySelector('.moves');
+   movesCounter.innerHTML = moves;
+   moves++;
+   console.log('Moves ' + moves);
 }
 
 /*
