@@ -80,6 +80,7 @@ function clickCard() {
          if(openedCards.length === 2) {
             checkIfMatch(clickedCard);
             addMoves();
+            checkScore();
          }
       }
    });
@@ -141,7 +142,7 @@ function checkIfMatch() {
 /*
  * Moves start point
  */
-let moves = 0;
+let moves = 1;
 
 /*
  * Increment moves
@@ -152,6 +153,25 @@ function addMoves() {
    moves++;
    console.log('Moves ' + moves);
 }
+
+
+/*
+ * Check score
+ */
+const starsCounter = document.querySelector('.stars');
+const starImage = `<li><i class="fa fa-star"></i></li>`;
+starsCounter.innerHTML = starImage + starImage + starImage;
+
+function checkScore() {
+   if (moves <= 5 ) {
+      starsCounter.innerHTML = starImage + starImage + starImage;
+   } else if (moves <= 10) {
+      starsCounter.innerHTML = starImage + starImage;
+   } else {
+      starsCounter.innerHTML = starImage;
+   }
+}
+
 
 /*
  * Start game
