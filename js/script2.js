@@ -82,6 +82,11 @@ function clickCard() {
             addMoves();
             checkScore();
          }
+         // Set the timer
+         if(timerOff) {
+            setTimer();
+            timerOff = false;
+         }
       }
    });
 }
@@ -154,14 +159,28 @@ function addMoves() {
    console.log('Moves ' + moves);
 }
 
+/*
+ * Reset moves
+ */
+function resetMoves() {
+   moves = 0;
+   document.querySelector('.moves').innerHTML = moves;
+}
+
+/*
+ * Initialize stars HTML class
+ */
+const starsCounter = document.querySelector('.stars');
+const starImage = `<li><i class="fa fa-star"></i></li>`;
+storeStars();
+
+function storeStars() {
+   starsCounter.innerHTML = starImage + starImage + starImage;
+}
 
 /*
  * Check score
  */
-const starsCounter = document.querySelector('.stars');
-const starImage = `<li><i class="fa fa-star"></i></li>`;
-starsCounter.innerHTML = starImage + starImage + starImage;
-
 function checkScore() {
    if (moves <= 5 ) {
       starsCounter.innerHTML = starImage + starImage + starImage;
@@ -172,8 +191,92 @@ function checkScore() {
    }
 }
 
+/*
+ * Set Timer
+ */
+let timerOff = true;
+
+/*
+ * Initialize the timer HTML class
+ */
+function showTimer() {
+   const timer = document.querySelector('.timer');
+   timer.innerHTML = minute + ' min ' + second + ' sec ';
+}
+
+// function setTimer() {
+//    interval = setInterval(() => {
+//       timer.innerHTML = time;
+//       time++;
+//      console.log(time);
+//   }, 1000);
+// }
+let interval;
+let second = 0, minute = 0;
+
+function setTimer() {
+   interval = setInterval(() => {
+      showTimer();
+      second++;
+      if (second === 60) {
+         minute++;
+         second = 0;
+      }
+   },1000);
+}
+
+function clearTimer() {
+   clearInterval(interval);
+}
+
+/*
+ * Reset timer
+ */
+function resetTimer() {
+   clearTimer();
+   timerOff = true;
+   second = 0;
+   minute = 0;
+}
+
+/*
+ * Show the timer
+ */
+// function showTimer() {
+//    // const timer = document.querySelector('.timer');
+//    // timer.innerHTML = time;
+//    // console.log(timer);
+//
+//    // const minutes = Math.floor (time / 60);
+//    // const seconds = time % 60;
+// }
+
+/*
+ * Reset button
+ */
+function resetButton() {
+   const restart = document.querySelector('.restart');
+   restart.addEventListener('click', function() {
+      resetGame();
+   });
+}
+
+/*
+ * Reset values
+ */
+function resetGame() {
+   resetTimer();
+   resetMoves();
+   storeStars();
+   showTimer();
+}
 
 /*
  * Start game
  */
 startGame();
+
+/*
+ * Reset game
+ */
+resetButton();
