@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Matching Game</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
@@ -16,17 +17,17 @@
         </header>
 
         <section class="score-panel">
-        	<ul class="stars">
+            <ul class="stars">
                 <!-- Inserting dynamic content-->
-        	</ul>
+            </ul>
 
-        	<span class="moves"></span> Moves
-                |
+            <span class="moves"></span> Moves
+            |
             <span class="timer">0 min 0 sec</span>
 
             <div class="restart">
-        		<i class="fa fa-repeat"></i>
-        	</div>
+                <i class="fa fa-repeat"></i>
+            </div>
         </section>
 
         <div class="deck_container">
@@ -35,16 +36,16 @@
             </ul>
         </div>
 
-        <div class="modal">
+        <div class="modal hidden">
             <div class="modal-content">
-                <h2>Game Over</h2>
-                <a class="cross" href="#">X</a>
-                <div class="result">
-                    <p>Total score
-                        <div class="total-moves">Total moves:</div>
-                        <div class="total-time">Total time:</div>
-                    </p>
-                    <p>Score: <span class="total-stars"></span></p>
+                <div class="model-head">
+                    <h2 class="modal-title">Game Over</h2>
+                    <a class="modal-close" href="#"><i class="far fa-times-circle"></i></a>
+                </div>
+                <div class="modal-result">
+                    <div class="total-moves"></div>
+                    <div class="total-time"></div>
+                    <div class="total-score"></div>
                 </div>
             </div>
         </div>
