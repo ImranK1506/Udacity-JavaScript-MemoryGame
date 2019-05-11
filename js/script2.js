@@ -271,7 +271,6 @@ function closeModal() {
  * Test the modal
  */
 // moves = 24;
-
 // totalScore();
 modalResults();
 // toggleModal();
@@ -286,8 +285,7 @@ function modalResults() {
    const timer = document.querySelector('.timer').innerHTML;
 
    const totalScore = document.querySelector('.total-score');
-   const score = checkScore();
-   console.log(totalScore);
+   const score = getScore();
 
    totalMoves.innerHTML = `Total moves: ${moves}`;
    totalTime.innerHTML = `Total time: ${timer}`;
@@ -297,16 +295,16 @@ function modalResults() {
 /*
  * Get score
  */
-// function getScore() {
-//    score = document.querySelectorAll('.stars');
-//    scoreCount = 0;
-//    for (score of scores) {
-//       if (score.style.display !== 'none') {
-//          scoreCount++;
-//       }
-//    }
-// return scoreCount;
-// }
+function getScore() {
+   scores = document.querySelectorAll('.stars li');
+   scoreCount = 0;
+   for (score of scores) {
+      if (score.style.display !== 'none') {
+         scoreCount++;
+      }
+   }
+return scoreCount;
+}
 
 /*
  * End game
