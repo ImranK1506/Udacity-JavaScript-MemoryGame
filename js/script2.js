@@ -255,8 +255,14 @@ function toggleModal() {
    modal.classList.toggle('hidden');
 }
 
+/*
+ * Close the modal
+ */
 function closeModal() {
    document.querySelector('.modal-close').addEventListener('click', () => {
+      deck.innerHTML = '';
+      startGame();
+      resetGame();
       toggleModal();
    });
 }
@@ -309,8 +315,8 @@ function endGame() {
    clearTimer();
    modalResults();
    toggleModal();
-   // replayGame();
    closeModal();
+   // replayGame();
 }
 
 /*
