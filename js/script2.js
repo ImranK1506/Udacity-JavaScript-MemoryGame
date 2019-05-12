@@ -185,7 +185,6 @@ function checkScore() {
    }
 }
 
-
 let timerOff = true;
 /*
  * Initialize the timer HTML class
@@ -242,7 +241,6 @@ function resetButton() {
    document.querySelector('.restart')
        .addEventListener('click', () => {
           deck.innerHTML = '';
-          startGame();
           resetGame();
        });
 }
@@ -261,19 +259,11 @@ function toggleModal() {
 function closeModal() {
    document.querySelector('.modal-close').addEventListener('click', () => {
       deck.innerHTML = '';
-      startGame();
       resetGame();
-      toggleModal();
+      // startGame();
+      // toggleModal();
    });
 }
-
-/*
- * Test the modal
- */
-// moves = 24;
-// totalScore();
-modalResults();
-// toggleModal();
 
 /*
  * Modal result
@@ -287,10 +277,12 @@ function modalResults() {
    const totalScore = document.querySelector('.total-score');
    const score = getScore();
 
-   totalMoves.innerHTML = `Total moves: ${moves}`;
+   totalMoves.innerHTML = `Total moves: ${moves + 1}`;
    totalTime.innerHTML = `Total time: ${timer}`;
    totalScore.innerHTML = `Total score: ${score}`;
 }
+
+modalResults();
 
 /*
  * Get score
@@ -314,6 +306,7 @@ function endGame() {
    modalResults();
    toggleModal();
    closeModal();
+   // resetGame();
    // replayGame();
 }
 
@@ -323,18 +316,19 @@ function endGame() {
 function resetGame() {
    resetTimer();
    resetMoves();
+   toggleModal();
+   startGame();
    // resetScore();
    // showTimer();
-   // toggleModal();
 }
 
 /*
  * Replay game
  */
-function replayGame() {
-   resetGame();
-   toggleModal();
-}
+// function replayGame() {
+//    resetGame();
+//    toggleModal();
+// }
 
 /*
  * Start game
