@@ -76,8 +76,8 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="496">
-                    <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+                  <first_editor relative-caret-position="400">
+                    <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -246,7 +246,7 @@
       <workItem from="1557157380110" duration="2955000" />
       <workItem from="1557254542801" duration="7875000" />
       <workItem from="1557332077911" duration="8704000" />
-      <workItem from="1557404324150" duration="46735000" />
+      <workItem from="1557404324150" duration="46794000" />
     </task>
     <task id="LOCAL-00001" summary="Create array of cards and append list blocks to the deck">
       <created>1534238905432</created>
@@ -259,13 +259,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226216000" />
+    <option name="totallyTimeSpent" value="226275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-43" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.13638757" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13638757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -411,8 +411,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="496">
-            <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+          <first_editor relative-caret-position="400">
+            <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           </first_editor>
           <second_editor />
         </state>

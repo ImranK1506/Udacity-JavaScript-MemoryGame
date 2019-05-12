@@ -23,7 +23,7 @@ For specific, detailed instructions, look at the project instructions in the [Ud
 
 ## Content
 
-`startGame(){}` - shuffles the deck and loops through the array of cards
+`startGame() {}` - shuffles the deck and loops through the array of cards
 
 `endGame() {}` - ends the game where the timer stops and displays a modal with the end result
 
