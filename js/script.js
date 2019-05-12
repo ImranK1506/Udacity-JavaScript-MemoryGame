@@ -316,6 +316,7 @@ return scoreCount;
  * End game
  */
 function endGame() {
+   match = 0;
    clearTimer();
    modalResults();
    toggleModal();
@@ -354,5 +355,3 @@ startGame();
  * Reset game
  */
 resetButton();
-
-toggleModal();
