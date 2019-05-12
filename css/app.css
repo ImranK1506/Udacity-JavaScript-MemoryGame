@@ -147,6 +147,7 @@ h1 {
     left: 50%;
     background-color: #fff;
     transform: translate(-50%, -70%);
+    border-radius: 10px;
 }
 
 .model-head {
@@ -243,10 +244,6 @@ and (orientation: portrait) {
         width: 90%;
         font-size: 22px;
     }
-    /*.modal-content {*/
-    /*    width: 330px;*/
-    /*    top: 65%;*/
-    /*}*/
 }
 /*
     ##Device: iPhone 6/7/8 Plus

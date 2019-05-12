@@ -243,18 +243,18 @@ function resetScore() {
    starsCounter.innerHTML = starImage + starImage + starImage;
 }
 
-let modal = document.querySelector('.modal');
 
 /*
  * Reset button
  */
 function resetButton() {
    document.querySelector('.restart').addEventListener('click', () => {
-      // modal.classList.remove('show');
-          deck.innerHTML = '';
-          resetGame();
+       deck.innerHTML = '';
+       resetGame();
    });
 }
+
+let modal = document.querySelector('.modal');
 
 /*
  * Toggle the modal
@@ -269,11 +269,8 @@ function toggleModal() {
  */
 function closeModal() {
    document.querySelector('.modal-close').addEventListener('click', () => {
-      // modal.classList.remove('show');
-         deck.innerHTML = '';
-         replayGame();
-         // resetGame();
-         // toggleModal();
+      deck.innerHTML = '';
+      replayGame();
    });
 }
 
@@ -320,9 +317,6 @@ function endGame() {
    clearTimer();
    modalResults();
    toggleModal();
-   // closeModal();
-   // resetGame();
-   // replayGame();
 }
 
 /*
@@ -333,9 +327,6 @@ function resetGame() {
    resetMoves();
    resetScore();
    startGame();
-   // toggleModal();
-   // resetScore();
-   // showTimer();
 }
 
 /*
