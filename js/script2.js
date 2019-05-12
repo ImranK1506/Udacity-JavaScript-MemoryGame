@@ -166,7 +166,7 @@ function addMoves() {
 }
 
 /*
- * Initialize stars HTML class
+ * Initialize stars CSS class
  */
 const starsCounter = document.querySelector('.stars');
 const starImage = `<li><i class="fa fa-star"></i></li>`;
@@ -187,7 +187,7 @@ function checkScore() {
 
 let timerOff = true;
 /*
- * Initialize the timer HTML class
+ * Initialize the timer CSS class
  */
 function showTimer() {
    const timer = document.querySelector('.timer');
