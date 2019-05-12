@@ -256,14 +256,14 @@ function toggleModal() {
 /*
  * Close the modal
  */
-function closeModal() {
-   document.querySelector('.modal-close').addEventListener('click', () => {
-      deck.innerHTML = '';
-      resetGame();
-      // startGame();
-      // toggleModal();
-   });
-}
+// function closeModal() {
+//    document.querySelector('.modal-close').addEventListener('click', () => {
+//       // deck.innerHTML = '';
+//       resetGame();
+//       // startGame();
+//       // toggleModal();
+//    });
+// }
 
 /*
  * Modal result
@@ -305,7 +305,7 @@ function endGame() {
    clearTimer();
    modalResults();
    toggleModal();
-   closeModal();
+   // closeModal();
    // resetGame();
    // replayGame();
 }
@@ -317,10 +317,13 @@ function resetGame() {
    resetTimer();
    resetMoves();
    toggleModal();
+   deck.innerHTML = '';
    startGame();
    // resetScore();
    // showTimer();
 }
+
+document.querySelector('.modal-close').addEventListener('click', resetGame);
 
 /*
  * Replay game
