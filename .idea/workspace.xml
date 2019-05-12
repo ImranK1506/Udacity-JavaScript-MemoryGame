@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8351f055-28cb-48f4-9a91-76466e8fd468" name="Default" comment="Create array of cards and append list blocks to the deck">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script2.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,8 +63,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/script.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="334">
-                  <caret line="336" column="19" lean-forward="true" selection-start-line="336" selection-start-column="19" selection-end-line="336" selection-end-column="19" />
+                <state relative-caret-position="702">
+                  <caret line="357" selection-start-line="357" selection-end-line="357" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -139,7 +137,6 @@
         <option value="$PROJECT_DIR$/js/data.js" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.css" />
         <option value="$PROJECT_DIR$/css/app.css" />
@@ -147,6 +144,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.es6" />
         <option value="$PROJECT_DIR$/js/script2.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/script.js" />
       </list>
     </option>
   </component>
@@ -168,16 +166,6 @@
             <path>
               <item name="Udacity-JavaScript-MemoryGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="Udacity-JavaScript-MemoryGame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Udacity-JavaScript-MemoryGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Udacity-JavaScript-MemoryGame" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Udacity-JavaScript-MemoryGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Udacity-JavaScript-MemoryGame" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -245,7 +233,7 @@
       <workItem from="1557157380110" duration="2955000" />
       <workItem from="1557254542801" duration="7875000" />
       <workItem from="1557332077911" duration="8704000" />
-      <workItem from="1557404324150" duration="45654000" />
+      <workItem from="1557404324150" duration="45829000" />
     </task>
     <task id="LOCAL-00001" summary="Create array of cards and append list blocks to the deck">
       <created>1534238905432</created>
@@ -258,13 +246,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225135000" />
+    <option name="totallyTimeSpent" value="225310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-43" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13638757" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13638757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -275,7 +263,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.13682093" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.13682093" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32944345" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32944345" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3295053" />
@@ -399,8 +387,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="336" column="19" lean-forward="true" selection-start-line="336" selection-start-column="19" selection-end-line="336" selection-end-column="19" />
+        <state relative-caret-position="702">
+          <caret line="357" selection-start-line="357" selection-end-line="357" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

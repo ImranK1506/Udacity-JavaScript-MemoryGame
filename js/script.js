@@ -355,5 +355,3 @@ startGame();
  * Reset game
  */
 resetButton();
-
-// toggleModal();
