@@ -3,7 +3,9 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Contributing](#contributing)
+* [Get started](#Started)
+* [Content](#Content)
+* [Author](#Author)
 
 ## Instructions
 
@@ -13,8 +15,22 @@ To get started, open `js/app.js` and start building out the app's functionality
 
 For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
 
-## Contributing
+## Get started
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+* git clone: https://github.com/ImranK1506/Udacity-JavaScript-MemoryGame
+* open the source code in your editor
+* open the index.html in your favorite browser to get a glimpse
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+## Content
+
+`startGame(){}` - shuffles the deck and loops through the array of cards
+
+`endGame() {}` - ends the game where the timer stops and displays a modal with the end result
+
+`resetGame() {}` - resets the game to it's default value
+
+`replayGame() {}` - closes the modal and starts a new session
+
+## Author
+
+**Imran Khan**
