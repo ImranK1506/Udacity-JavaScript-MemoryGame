@@ -235,6 +235,15 @@ function resetMoves() {
 }
 
 /*
+ * Reset score
+ */
+function resetScore() {
+   const starsCounter = document.querySelector('.stars');
+   const starImage = `<li><i class="fa fa-star"></i></li>`;
+   starsCounter.innerHTML = starImage + starImage + starImage;
+}
+
+/*
  * Reset button
  */
 function resetButton() {
@@ -318,6 +327,7 @@ function endGame() {
 function resetGame() {
    resetTimer();
    resetMoves();
+   resetScore();
    startGame();
    // toggleModal();
    // deck.innerHTML = '';
