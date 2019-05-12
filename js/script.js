@@ -333,7 +333,6 @@ function resetGame() {
    resetScore();
    startGame();
    // toggleModal();
-   // deck.innerHTML = '';
    // resetScore();
    // showTimer();
 }
