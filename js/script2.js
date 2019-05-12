@@ -238,8 +238,7 @@ function resetMoves() {
  * Reset button
  */
 function resetButton() {
-   document.querySelector('.restart')
-       .addEventListener('click', () => {
+   document.querySelector('.restart').addEventListener('click', () => {
           deck.innerHTML = '';
           resetGame();
        });
@@ -256,14 +255,17 @@ function toggleModal() {
 /*
  * Close the modal
  */
-// function closeModal() {
-//    document.querySelector('.modal-close').addEventListener('click', () => {
-//       // deck.innerHTML = '';
-//       resetGame();
-//       // startGame();
-//       // toggleModal();
-//    });
-// }
+function closeModal() {
+   document.querySelector('.modal-close').addEventListener('click', () => {
+      deck.innerHTML = '';
+      replayGame();
+      // resetGame();
+      // startGame();
+      // toggleModal();
+   });
+}
+
+closeModal();
 
 /*
  * Modal result
@@ -316,22 +318,20 @@ function endGame() {
 function resetGame() {
    resetTimer();
    resetMoves();
-   toggleModal();
-   deck.innerHTML = '';
    startGame();
+   // toggleModal();
+   // deck.innerHTML = '';
    // resetScore();
    // showTimer();
 }
 
-document.querySelector('.modal-close').addEventListener('click', resetGame);
-
 /*
  * Replay game
  */
-// function replayGame() {
-//    resetGame();
-//    toggleModal();
-// }
+function replayGame() {
+   resetGame();
+   toggleModal();
+}
 
 /*
  * Start game
