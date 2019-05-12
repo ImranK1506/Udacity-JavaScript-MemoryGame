@@ -3,9 +3,9 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Get started](#Started)
-* [Content](#Content)
-* [Author](#Author)
+* [Get started](#get started)
+* [Content](#content)
+* [Author](#author)
 
 ## Instructions
 
