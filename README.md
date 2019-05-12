@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Get started](#get started)
+* [Get started](#getstarted)
 * [Content](#content)
 * [Author](#author)
 
