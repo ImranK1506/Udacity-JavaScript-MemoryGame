@@ -211,6 +211,10 @@ and (-webkit-device-pixel-ratio : 3) {
         width: 90%;
         font-size: 22px;
     }
+    .modal-content {
+        width: 330px;
+        top: 52%;
+    }
 }
 
 /*
@@ -239,6 +243,10 @@ and (orientation: portrait) {
         width: 90%;
         font-size: 22px;
     }
+    /*.modal-content {*/
+    /*    width: 330px;*/
+    /*    top: 65%;*/
+    /*}*/
 }
 /*
     ##Device: iPhone 6/7/8 Plus
@@ -251,6 +259,10 @@ and (-webkit-device-pixel-ratio: 3) {
         width: 22%;
         height: 95px;
         margin: 10px 0;
+    }
+    .modal-content {
+        width: 415px;
+        top: 62%;
     }
 }
 
