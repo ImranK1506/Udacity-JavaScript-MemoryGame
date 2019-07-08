@@ -31,6 +31,10 @@ For specific, detailed instructions, look at the project instructions in the [Ud
 
 `replayGame() {}` - closes the modal and starts a new session
 
+## Preview
+
+[Memory Game](https://udacity-javascript-memorygame-qsw9yahgy.now.sh)
+
 ## Author
 
 **Imran Khan**
